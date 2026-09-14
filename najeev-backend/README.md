@@ -17,6 +17,8 @@ docker compose up -d
 
 Open http://127.0.0.1:8000/docs and use Authorize with the admin credentials from `.env`. Login is `POST /auth/token` with form fields `username` and `password`. No public admin registration exists. Rerunning the seed does not reset an existing admin password or duplicate existing sample titles.
 
+After Docker Desktop is running and `.env` is configured, `powershell -ExecutionPolicy Bypass -File .\start.ps1` automates environment setup, container startup, database readiness checks, seeding, and serving the API. Windows may require a restart after installing Docker/WSL and enabling Virtual Machine Platform.
+
 ## Endpoints
 
 | Method | Path | Purpose |
